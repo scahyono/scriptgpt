@@ -2,6 +2,8 @@
 
 ScriptGPT is a Python application that uses OpenAI's GPT-4 model to generate responses to user inputs. It specializes in creating and optimizing scripts for automation and integration tasks.
 
+![image](https://github.com/scahyono/scriptgpt/assets/2072698/6c54376b-4e34-47d5-91cb-3218f2e0a3a0)
+
 ## Installation
 
 1. Clone this repository:
