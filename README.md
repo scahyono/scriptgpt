@@ -44,7 +44,6 @@ ScriptGPT is a Python application that uses OpenAI's GPT-4 Turbo model to genera
     ```
     You can get a $5 in free credit for your first 3 months of OpenAI API key from [OpenAI's Pricing page](https://openai.com/pricing).
 
-
 ## Usage
 
 Run the script with the following command:
@@ -55,5 +54,6 @@ python scriptgpt.py
 
 The application will start a chat interface in the terminal. Type your input and press Enter to get a response from the model. Type 'bye', 'exit', or 'quit' to end the chat.
 
-License
+## License
+
 This project is licensed under the terms of the MIT license.
