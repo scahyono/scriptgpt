@@ -2,15 +2,6 @@
 
 ScriptGPT is a Python application that uses OpenAI's GPT-4 Turbo model to generate responses to user inputs in any popular programming language. It specializes in creating and optimizing scripts for automation and integration tasks.
 
-## Features
-
-- :robot: **Automated Script Generation in Any Language**: ScriptGPT, powered by GPT-4 Turbo, can generate scripts in any popular programming language based on user inputs, reducing the need for manual coding.
-- :books: **Large Context Window**: GPT-4 Turbo's context window of 128K tokens allows it to write scripts that are 30 times bigger and more complex than previous models.
-- :pencil2: **Refinement through Feedback**: GPT-4 Turbo can refine its outputs based on user feedback. If there's an error or a request for improvement, the model can take this into account for future responses.
-- :rocket: **Optimization**: The application can optimize scripts for efficiency, potentially saving time and resources.
-- :link: **Integration**: ScriptGPT can create scripts that integrate different systems, simplifying complex tasks.
-- :smiley: **User-friendly**: The application is designed to be easy to use, even for those without a background in programming.
-
 ## Benefits
 
 - :trophy: **Professional-Grade Scripts**: ScriptGPT generates professional-grade scripts ready to optimize your customer operations or projects, providing high-quality, reliable solutions.
@@ -20,6 +11,19 @@ ScriptGPT is a Python application that uses OpenAI's GPT-4 Turbo model to genera
 - :dart: **Accuracy**: The GPT-4 model can generate accurate and effective scripts, reducing the risk of errors.
 - :wrench: **Versatility**: ScriptGPT can be used for a wide range of tasks, from simple automation to complex system integration.
 - :door: **Accessibility**: With its user-friendly design, ScriptGPT makes script generation and optimization accessible to a wider audience.
+
+## IP Protection
+
+:lock: OpenAI respects your data privacy and intellectual property. They will not use your API data to improve their models. For more information, please refer to [OpenAI's Enterprise Privacy Policy](https://openai.com/enterprise-privacy).
+
+## Features
+
+- :robot: **Automated Script Generation in Any Language**: ScriptGPT, powered by GPT-4 Turbo, can generate scripts in any popular programming language based on user inputs, reducing the need for manual coding.
+- :books: **Large Context Window**: GPT-4 Turbo's context window of 128K tokens allows it to write scripts that are 30 times bigger and more complex than previous models.
+- :pencil2: **Refinement through Feedback**: GPT-4 Turbo can refine its outputs based on user feedback. If there's an error or a request for improvement, the model can take this into account for future responses.
+- :rocket: **Optimization**: The application can optimize scripts for efficiency, potentially saving time and resources.
+- :link: **Integration**: ScriptGPT can create scripts that integrate different systems, simplifying complex tasks.
+- :smiley: **User-friendly**: The application is designed to be easy to use, even for those without a background in programming.
 
 ![image](https://github.com/scahyono/scriptgpt/assets/2072698/6c54376b-4e34-47d5-91cb-3218f2e0a3a0)
 
