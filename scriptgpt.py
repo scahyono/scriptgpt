@@ -41,7 +41,7 @@ def chat():
         if user_input.lower() in ('bye', 'exit', 'quit'):
             print(f"\033[94mScriptGPT: \033[0mGoodbye! Have a nice day!")  # \033[94m is the ANSI escape code for blue text
             break
-        response = scriptgpt_response(user_input, openai)
+        response = scriptgpt_response(user_input, client)
         print(f"\033[94mScriptGPT: \033[0m{response}")
 
 if __name__ == "__main__":
