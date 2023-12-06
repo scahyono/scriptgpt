@@ -7,15 +7,15 @@ import scriptgpt
 # Initialize the OpenAI client
 client = openai.OpenAI(api_key="dummy key")
 
-class Message:
+class Delta:
     def __init__(self, content):
         self.content = content
 
 class Choice:
     def __init__(self, content):
-        self.message = Message(content)
+        self.delta = Delta(content)
 
-class Response:
+class Chunk:
     def __init__(self, choice):
         self.choices = [choice]
 
@@ -24,15 +24,15 @@ class TestScriptGPT(unittest.TestCase):
     def test_scriptgpt_response(self, mock_create):
         # Arrange
         user_input = 'Test input'
-
-        mock_create.return_value = Response(Choice('Test response'))
-        response_content = mock_create.return_value.choices[0].message.content.strip()
+        mock_create.return_value = [Chunk(Choice('Test response'))]
 
         # Call the function to test
-        response = scriptgpt.scriptgpt_response(user_input, client)
+        stream = scriptgpt.scriptgpt_response(user_input, client)
 
         # Check that the response from the function matches the mocked response
-        self.assertEqual(response, 'Test response')
+        for chunk in stream: 
+            chunkContent = chunk.choices[0].delta.content 
+        self.assertEqual(chunkContent, 'Test response')
 
 
     @patch('builtins.input', return_value='quit')

@@ -19,19 +19,19 @@ def scriptgpt_response(user_input, client):
 
     try:
         # Connect to the OpenAI API and get a response using the updated method
-        chat_completion = client.chat.completions.create(
+        stream = client.chat.completions.create(
+            stream=True,
             model=MODEL,
             messages=[
                 {"role": "system", "content": INSTRUCTION},
                 {"role": "user", "content": user_input}
             ]
         )
-        response_content = chat_completion.choices[0].message.content.strip()
 
     except Exception as e:
         return f"An error occurred: {e}"
 
-    return response_content
+    return stream
 
 def chat():
     print("Welcome to ScriptGPT! What automation or integration script do you need? And in which language? Type 'bye' to exit.")
@@ -41,8 +41,13 @@ def chat():
         if user_input.lower() in ('bye', 'exit', 'quit'):
             print(f"\033[94mScriptGPT: \033[0mGoodbye! Have a nice day!")  # \033[94m is the ANSI escape code for blue text
             break
-        response = scriptgpt_response(user_input, client)
-        print(f"\033[94mScriptGPT: \033[0m{response}")
+        stream = scriptgpt_response(user_input, client)
+        print(f"\033[94mScriptGPT: \033[0m", end='') 
+        for chunk in stream: 
+            chunkContent = chunk.choices[0].delta.content 
+            if chunkContent is None: 
+                chunkContent = "\n" 
+            print(chunkContent, end='')
 
 if __name__ == "__main__":
     chat()
